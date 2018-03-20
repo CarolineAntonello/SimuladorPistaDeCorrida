@@ -45,7 +45,6 @@ namespace SimuladorPistaDeCorrida.Domain
                 {
                     throw new Exception(Nome + ": saldo Insuficiente" + "voce possui" + Dinheiro);
                 }
-                
             }
             else
             {

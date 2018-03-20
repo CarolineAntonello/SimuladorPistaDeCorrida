@@ -17,13 +17,14 @@ namespace SimuladorPistaDeCorrida.Domain
         private int quantidade;
         private int cachorro;
 
-        public Aposta(Apostador apostador, Apostador apostador1, int quantidade, object quantidade1, int cachorro)
+        public Aposta(Apostador apostador, int quantidade, int cachorro)
         {
             this.apostador = apostador;
             this.quantidade = quantidade;
             this.cachorro = cachorro;
         }
 
+        
         public string GetDescription()
         {
             //retorna uma sequencia de caracteres que diz quem fez a aposta, quanto dinheiro

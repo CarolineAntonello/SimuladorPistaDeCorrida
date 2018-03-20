@@ -137,6 +137,7 @@
             this.rbtJoao.TabIndex = 7;
             this.rbtJoao.TabStop = true;
             this.rbtJoao.UseVisualStyleBackColor = true;
+            this.rbtJoao.CheckedChanged += new System.EventHandler(this.rbtJoao_CheckedChanged);
             // 
             // rbtBeto
             // 
@@ -148,6 +149,7 @@
             this.rbtBeto.TabIndex = 8;
             this.rbtBeto.TabStop = true;
             this.rbtBeto.UseVisualStyleBackColor = true;
+            this.rbtBeto.CheckedChanged += new System.EventHandler(this.rbtBeto_CheckedChanged);
             // 
             // rbtAlfredo
             // 
@@ -159,6 +161,7 @@
             this.rbtAlfredo.TabIndex = 9;
             this.rbtAlfredo.TabStop = true;
             this.rbtAlfredo.UseVisualStyleBackColor = true;
+            this.rbtAlfredo.CheckedChanged += new System.EventHandler(this.rbtAlfredo_CheckedChanged);
             // 
             // btnApostar
             // 
