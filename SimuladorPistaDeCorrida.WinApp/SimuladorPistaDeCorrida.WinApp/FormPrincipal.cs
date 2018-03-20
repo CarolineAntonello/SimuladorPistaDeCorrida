@@ -8,7 +8,7 @@ namespace SimuladorPistaDeCorrida.WinApp
     {
         Apostador apostador = new Apostador();
         Apostador[] apostadores = new Apostador[3];
-        
+        Apostador recebeApostador;
         
         public FormPrincipal()
         {
@@ -41,25 +41,29 @@ namespace SimuladorPistaDeCorrida.WinApp
         {
             //VerificandoRadioButton();
             //VerificaTextField();
-            apostador = VerificandoRadioButton();
+            apostador = VerificandoRadioButton(recebeApostador);
             apostador.NovaAposta(Convert.ToInt32(numericValor.Value), Convert.ToInt32(numericCao.Value));
             VerificaTextField(apostador);
 
         } 
 
         
-        public Apostador VerificandoRadioButton()
+        public Apostador VerificandoRadioButton(Apostador recebeApostador)
         {
             if (rbtJoao.Checked == true)
             {
+                recebeApostador = apostadores[0];
                 return apostadores[0];
+                
             }
             else if (rbtBeto.Checked == true)
             {
+                recebeApostador = apostadores[1];
                 return apostadores[1];
             }
             else
             {
+                recebeApostador = apostadores[2];
                 return apostadores[2];
             }
         }
@@ -89,8 +93,7 @@ namespace SimuladorPistaDeCorrida.WinApp
             {
                 //var teste = apostadores[0].Nome + " apostou " + numericValor.Value + " no cachorro " + numericCao.Value;
                 txtJoão.Text = apostador.aposta.GetDescription();
-
-
+                
             }
             else if (rbtBeto.Checked == true)
             {

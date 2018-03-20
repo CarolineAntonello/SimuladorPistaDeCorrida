@@ -15,6 +15,7 @@ namespace SimuladorPistaDeCorrida.Domain
         public RadioButton Meuradiobutton;//botão de radio
         public Label Minhalabel;//meu rotulo
         public Aposta aposta;
+        public Apostador recebeApostador;
 
         public void UpdateLabels()
         {
@@ -44,6 +45,7 @@ namespace SimuladorPistaDeCorrida.Domain
                 else
                 {
                     throw new Exception(Nome + ": saldo Insuficiente" + "voce possui" + Dinheiro);
+
                 }
                 
             }
