@@ -39,11 +39,11 @@ namespace SimuladorPistaDeCorrida.WinApp
 
         private void btnApostar_Click(object sender, EventArgs e)
         {
-            VerificandoRadioButton();
-            VerificaTextField();
-            //apostador = VerificandoRadioButton();
-            //apostador.NovaAposta(Convert.ToInt32(numericValor.Value), Convert.ToInt32(numericCao.Value));
-            //VerificaTextField(apostador);
+            //VerificandoRadioButton();
+            //VerificaTextField();
+            apostador = VerificandoRadioButton();
+            apostador.NovaAposta(Convert.ToInt32(numericValor.Value), Convert.ToInt32(numericCao.Value));
+            VerificaTextField(apostador);
 
         } 
 
@@ -53,7 +53,6 @@ namespace SimuladorPistaDeCorrida.WinApp
             if (rbtJoao.Checked == true)
             {
                 return apostadores[0];
-
             }
             else if (rbtBeto.Checked == true)
             {
@@ -84,25 +83,25 @@ namespace SimuladorPistaDeCorrida.WinApp
             }
         }
 
-        private void VerificaTextField()
+        private void VerificaTextField(Apostador apostador)
         {
             if (rbtJoao.Checked == true)
             {
-                var teste = apostadores[0].Nome + " apostou " + numericValor.Value + " no cachorro " + numericCao.Value;
-                txtJoão.Text = teste;
-               
+                //var teste = apostadores[0].Nome + " apostou " + numericValor.Value + " no cachorro " + numericCao.Value;
+                txtJoão.Text = apostador.aposta.GetDescription();
+
 
             }
             else if (rbtBeto.Checked == true)
             {
-                var teste = apostadores[1].Nome + " apostou " + numericValor.Value + " no cachorro " + numericCao.Value;
-                txtBeto.Text = teste;
-                
+                //var teste = apostadores[1].Nome + " apostou " + numericValor.Value + " no cachorro " + numericCao.Value;
+                txtBeto.Text = apostador.aposta.GetDescription();
+
             }
             else
             {
-                var teste = apostadores[2].Nome + " apostou " + numericValor.Value + " no cachorro " + numericCao.Value;
-                txtAlfredo.Text = teste;
+                //var teste = apostadores[2].Nome + " apostou " + numericValor.Value + " no cachorro " + numericCao.Value;
+                txtAlfredo.Text = apostador.aposta.GetDescription();
                 
             }
         } 

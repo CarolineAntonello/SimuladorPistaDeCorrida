@@ -14,8 +14,8 @@ namespace SimuladorPistaDeCorrida.Domain
         public int Dinheiro;//quanto dinheiro resta
         public RadioButton Meuradiobutton;//botão de radio
         public Label Minhalabel;//meu rotulo
+        public Aposta aposta;
 
-        
         public void UpdateLabels()
         {
             Minhalabel.Text = Nome + " tem: " + Dinheiro;

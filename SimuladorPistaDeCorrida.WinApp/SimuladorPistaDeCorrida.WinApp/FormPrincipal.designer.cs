@@ -34,7 +34,6 @@
             this.pbxCao2 = new System.Windows.Forms.PictureBox();
             this.pbxCao3 = new System.Windows.Forms.PictureBox();
             this.pbxCao4 = new System.Windows.Forms.PictureBox();
-            this.lblBalcaoApostas = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.rbtJoao = new System.Windows.Forms.RadioButton();
             this.rbtBeto = new System.Windows.Forms.RadioButton();
@@ -52,6 +51,7 @@
             this.lblJoao = new System.Windows.Forms.Label();
             this.lblBeto = new System.Windows.Forms.Label();
             this.lblAlfredo = new System.Windows.Forms.Label();
+            this.lblBalcaoApostas = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPistaCorrida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCao1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCao2)).BeginInit();
@@ -106,16 +106,6 @@
             this.pbxCao4.Size = new System.Drawing.Size(79, 22);
             this.pbxCao4.TabIndex = 4;
             this.pbxCao4.TabStop = false;
-            // 
-            // lblBalcaoApostas
-            // 
-            this.lblBalcaoApostas.AutoSize = true;
-            this.lblBalcaoApostas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBalcaoApostas.Location = new System.Drawing.Point(42, 243);
-            this.lblBalcaoApostas.Name = "lblBalcaoApostas";
-            this.lblBalcaoApostas.Size = new System.Drawing.Size(140, 16);
-            this.lblBalcaoApostas.TabIndex = 5;
-            this.lblBalcaoApostas.Text = "Balcão de Apostas";
             // 
             // label1
             // 
@@ -285,6 +275,16 @@
             this.lblAlfredo.TabIndex = 22;
             this.lblAlfredo.Text = "Alfredo";
             // 
+            // lblBalcaoApostas
+            // 
+            this.lblBalcaoApostas.AutoSize = true;
+            this.lblBalcaoApostas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBalcaoApostas.Location = new System.Drawing.Point(42, 243);
+            this.lblBalcaoApostas.Name = "lblBalcaoApostas";
+            this.lblBalcaoApostas.Size = new System.Drawing.Size(140, 16);
+            this.lblBalcaoApostas.TabIndex = 5;
+            this.lblBalcaoApostas.Text = "Balcão de Apostas";
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,7 +338,6 @@
         private System.Windows.Forms.PictureBox pbxCao2;
         private System.Windows.Forms.PictureBox pbxCao3;
         private System.Windows.Forms.PictureBox pbxCao4;
-        private System.Windows.Forms.Label lblBalcaoApostas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton rbtJoao;
         private System.Windows.Forms.RadioButton rbtBeto;
@@ -356,6 +355,7 @@
         private System.Windows.Forms.Label lblJoao;
         private System.Windows.Forms.Label lblBeto;
         private System.Windows.Forms.Label lblAlfredo;
+        private System.Windows.Forms.Label lblBalcaoApostas;
     }
 }
 

@@ -10,9 +10,9 @@ namespace SimuladorPistaDeCorrida.Domain
     //este é o objeto que a classe Guy usa para representar apostas no aplicativo
     public class Aposta
     {
-        public int _quantidade;//amount
-        public int _cachorro;
-        public Apostador _apostador;//o cara q fez a aposta
+        //public int _quantidade;//amount
+        //public int _cachorro;
+        //public Apostador _apostador;//o cara q fez a aposta
         private Apostador apostador;
         private int quantidade;
         private int cachorro;
@@ -39,13 +39,13 @@ namespace SimuladorPistaDeCorrida.Domain
             //o parametro deve receber o vencedor da corrida. se o cão venceu, 
             //retorna a quantidade apostada.
             //De outra forma, retorna um valor negativo correspondente ao valor apostado. 
-            if (_cachorro == Winner)
+            if (cachorro == Winner)
             {
-                return _quantidade;
+                return quantidade;
             }
             else
             {
-                return _quantidade * -1;
+                return quantidade * -1;
             }
         }
 
