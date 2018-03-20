@@ -8,7 +8,6 @@ namespace SimuladorPistaDeCorrida.WinApp
     {
         Apostador apostador = new Apostador();
         Apostador[] apostadores = new Apostador[3];
-        Aposta aposta = new Apostador();
         
         
         public FormPrincipal()
@@ -41,7 +40,11 @@ namespace SimuladorPistaDeCorrida.WinApp
         private void btnApostar_Click(object sender, EventArgs e)
         {
             VerificandoRadioButton();
-            
+            VerificaTextField();
+            //apostador = VerificandoRadioButton();
+            //apostador.NovaAposta(Convert.ToInt32(numericValor.Value), Convert.ToInt32(numericCao.Value));
+            //VerificaTextField(apostador);
+
         } 
 
         
@@ -49,29 +52,15 @@ namespace SimuladorPistaDeCorrida.WinApp
         {
             if (rbtJoao.Checked == true)
             {
-                //var teste = apostadores[0].Nome + " apostou ";
-                //var teste2 = apostadores[0].Nome;
-                //txtJoão.Text = teste;
-                //lblNomeApostador.Text = teste2;
-                apostador.NovaAposta(quantidade,cachorro);
-                txtJoão.Text = apostador.apos
                 return apostadores[0];
 
             }
             else if (rbtBeto.Checked == true)
             {
-                //var teste = apostadores[1].Nome + " apostou ";
-                //var teste2 = apostadores[1].Nome;
-                //txtBeto.Text = teste;
-                //lblNomeApostador.Text = teste2;
                 return apostadores[1];
             }
             else
             {
-                //var teste = apostadores[2].Nome + " apostou ";
-                //var teste2 = apostadores[2].Nome;
-                //txtAlfredo.Text = teste;
-                //lblNomeApostador.Text = teste2;
                 return apostadores[2];
             }
         }
@@ -94,6 +83,29 @@ namespace SimuladorPistaDeCorrida.WinApp
                 lblNomeApostador.Text = teste2;
             }
         }
+
+        private void VerificaTextField()
+        {
+            if (rbtJoao.Checked == true)
+            {
+                var teste = apostadores[0].Nome + " apostou " + numericValor.Value + " no cachorro " + numericCao.Value;
+                txtJoão.Text = teste;
+               
+
+            }
+            else if (rbtBeto.Checked == true)
+            {
+                var teste = apostadores[1].Nome + " apostou " + numericValor.Value + " no cachorro " + numericCao.Value;
+                txtBeto.Text = teste;
+                
+            }
+            else
+            {
+                var teste = apostadores[2].Nome + " apostou " + numericValor.Value + " no cachorro " + numericCao.Value;
+                txtAlfredo.Text = teste;
+                
+            }
+        } 
 
         private void rbtJoao_CheckedChanged(object sender, EventArgs e)
         {

@@ -47,8 +47,8 @@
             this.btnCorrer = new System.Windows.Forms.Button();
             this.lblNomeApostador = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericValor = new System.Windows.Forms.NumericUpDown();
+            this.numericCao = new System.Windows.Forms.NumericUpDown();
             this.lblJoao = new System.Windows.Forms.Label();
             this.lblBeto = new System.Windows.Forms.Label();
             this.lblAlfredo = new System.Windows.Forms.Label();
@@ -57,8 +57,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxCao2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCao3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCao4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericValor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericCao)).BeginInit();
             this.SuspendLayout();
             // 
             // pbxPistaCorrida
@@ -187,25 +187,28 @@
             // txtJoão
             // 
             this.txtJoão.Enabled = false;
+            this.txtJoão.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJoão.Location = new System.Drawing.Point(348, 320);
             this.txtJoão.Name = "txtJoão";
-            this.txtJoão.Size = new System.Drawing.Size(302, 20);
+            this.txtJoão.Size = new System.Drawing.Size(302, 22);
             this.txtJoão.TabIndex = 12;
             // 
             // txtBeto
             // 
             this.txtBeto.Enabled = false;
+            this.txtBeto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBeto.Location = new System.Drawing.Point(348, 355);
             this.txtBeto.Name = "txtBeto";
-            this.txtBeto.Size = new System.Drawing.Size(302, 20);
+            this.txtBeto.Size = new System.Drawing.Size(302, 22);
             this.txtBeto.TabIndex = 13;
             // 
             // txtAlfredo
             // 
             this.txtAlfredo.Enabled = false;
+            this.txtAlfredo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAlfredo.Location = new System.Drawing.Point(348, 389);
             this.txtAlfredo.Name = "txtAlfredo";
-            this.txtAlfredo.Size = new System.Drawing.Size(302, 20);
+            this.txtAlfredo.Size = new System.Drawing.Size(302, 22);
             this.txtAlfredo.TabIndex = 14;
             // 
             // btnCorrer
@@ -238,19 +241,19 @@
             this.label2.TabIndex = 17;
             this.label2.Text = "reais no cão número";
             // 
-            // numericUpDown1
+            // numericValor
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(147, 472);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(119, 20);
-            this.numericUpDown1.TabIndex = 18;
+            this.numericValor.Location = new System.Drawing.Point(147, 472);
+            this.numericValor.Name = "numericValor";
+            this.numericValor.Size = new System.Drawing.Size(119, 20);
+            this.numericValor.TabIndex = 18;
             // 
-            // numericUpDown2
+            // numericCao
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(409, 472);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(109, 20);
-            this.numericUpDown2.TabIndex = 19;
+            this.numericCao.Location = new System.Drawing.Point(409, 472);
+            this.numericCao.Name = "numericCao";
+            this.numericCao.Size = new System.Drawing.Size(109, 20);
+            this.numericCao.TabIndex = 19;
             // 
             // lblJoao
             // 
@@ -290,8 +293,8 @@
             this.Controls.Add(this.lblAlfredo);
             this.Controls.Add(this.lblBeto);
             this.Controls.Add(this.lblJoao);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numericCao);
+            this.Controls.Add(this.numericValor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblNomeApostador);
             this.Controls.Add(this.btnCorrer);
@@ -321,8 +324,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxCao2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCao3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCao4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericValor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericCao)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,8 +351,8 @@
         private System.Windows.Forms.Button btnCorrer;
         private System.Windows.Forms.Label lblNomeApostador;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericValor;
+        private System.Windows.Forms.NumericUpDown numericCao;
         private System.Windows.Forms.Label lblJoao;
         private System.Windows.Forms.Label lblBeto;
         private System.Windows.Forms.Label lblAlfredo;

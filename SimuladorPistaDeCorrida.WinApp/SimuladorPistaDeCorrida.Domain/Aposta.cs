@@ -24,7 +24,7 @@ namespace SimuladorPistaDeCorrida.Domain
             this.cachorro = cachorro;
         }
 
-        
+
         public string GetDescription()
         {
             //retorna uma sequencia de caracteres que diz quem fez a aposta, quanto dinheiro
