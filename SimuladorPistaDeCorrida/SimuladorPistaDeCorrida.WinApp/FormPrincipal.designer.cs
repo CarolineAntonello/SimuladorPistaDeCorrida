@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.pbxPistaCorrida = new System.Windows.Forms.PictureBox();
             this.pbxCao1 = new System.Windows.Forms.PictureBox();
@@ -52,6 +53,7 @@
             this.lblBeto = new System.Windows.Forms.Label();
             this.lblAlfredo = new System.Windows.Forms.Label();
             this.lblBalcaoApostas = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbxPistaCorrida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCao1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCao2)).BeginInit();
@@ -67,14 +69,15 @@
             this.pbxPistaCorrida.InitialImage = null;
             this.pbxPistaCorrida.Location = new System.Drawing.Point(26, 12);
             this.pbxPistaCorrida.Name = "pbxPistaCorrida";
-            this.pbxPistaCorrida.Size = new System.Drawing.Size(624, 209);
+            this.pbxPistaCorrida.Size = new System.Drawing.Size(636, 209);
             this.pbxPistaCorrida.TabIndex = 0;
             this.pbxPistaCorrida.TabStop = false;
             // 
             // pbxCao1
             // 
+            this.pbxCao1.AccessibleName = "Cachorro 1";
             this.pbxCao1.Image = ((System.Drawing.Image)(resources.GetObject("pbxCao1.Image")));
-            this.pbxCao1.Location = new System.Drawing.Point(40, 23);
+            this.pbxCao1.Location = new System.Drawing.Point(62, 23);
             this.pbxCao1.Name = "pbxCao1";
             this.pbxCao1.Size = new System.Drawing.Size(79, 22);
             this.pbxCao1.TabIndex = 1;
@@ -82,8 +85,9 @@
             // 
             // pbxCao2
             // 
+            this.pbxCao2.AccessibleName = "Cachorro 2";
             this.pbxCao2.Image = ((System.Drawing.Image)(resources.GetObject("pbxCao2.Image")));
-            this.pbxCao2.Location = new System.Drawing.Point(40, 72);
+            this.pbxCao2.Location = new System.Drawing.Point(62, 71);
             this.pbxCao2.Name = "pbxCao2";
             this.pbxCao2.Size = new System.Drawing.Size(79, 22);
             this.pbxCao2.TabIndex = 2;
@@ -91,8 +95,9 @@
             // 
             // pbxCao3
             // 
+            this.pbxCao3.AccessibleName = "Cachorro 3";
             this.pbxCao3.Image = ((System.Drawing.Image)(resources.GetObject("pbxCao3.Image")));
-            this.pbxCao3.Location = new System.Drawing.Point(40, 129);
+            this.pbxCao3.Location = new System.Drawing.Point(62, 128);
             this.pbxCao3.Name = "pbxCao3";
             this.pbxCao3.Size = new System.Drawing.Size(79, 22);
             this.pbxCao3.TabIndex = 3;
@@ -100,8 +105,9 @@
             // 
             // pbxCao4
             // 
+            this.pbxCao4.AccessibleName = "Cachorro 4";
             this.pbxCao4.Image = ((System.Drawing.Image)(resources.GetObject("pbxCao4.Image")));
-            this.pbxCao4.Location = new System.Drawing.Point(40, 179);
+            this.pbxCao4.Location = new System.Drawing.Point(62, 179);
             this.pbxCao4.Name = "pbxCao4";
             this.pbxCao4.Size = new System.Drawing.Size(79, 22);
             this.pbxCao4.TabIndex = 4;
@@ -180,7 +186,7 @@
             this.txtJoão.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJoão.Location = new System.Drawing.Point(348, 320);
             this.txtJoão.Name = "txtJoão";
-            this.txtJoão.Size = new System.Drawing.Size(302, 22);
+            this.txtJoão.Size = new System.Drawing.Size(270, 22);
             this.txtJoão.TabIndex = 12;
             // 
             // txtBeto
@@ -189,7 +195,7 @@
             this.txtBeto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBeto.Location = new System.Drawing.Point(348, 355);
             this.txtBeto.Name = "txtBeto";
-            this.txtBeto.Size = new System.Drawing.Size(302, 22);
+            this.txtBeto.Size = new System.Drawing.Size(270, 22);
             this.txtBeto.TabIndex = 13;
             // 
             // txtAlfredo
@@ -198,18 +204,20 @@
             this.txtAlfredo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAlfredo.Location = new System.Drawing.Point(348, 389);
             this.txtAlfredo.Name = "txtAlfredo";
-            this.txtAlfredo.Size = new System.Drawing.Size(302, 22);
+            this.txtAlfredo.Size = new System.Drawing.Size(270, 22);
             this.txtAlfredo.TabIndex = 14;
             // 
             // btnCorrer
             // 
+            this.btnCorrer.Enabled = false;
             this.btnCorrer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCorrer.Location = new System.Drawing.Point(548, 462);
+            this.btnCorrer.Location = new System.Drawing.Point(516, 462);
             this.btnCorrer.Name = "btnCorrer";
             this.btnCorrer.Size = new System.Drawing.Size(102, 37);
             this.btnCorrer.TabIndex = 15;
             this.btnCorrer.Text = "Corram!";
             this.btnCorrer.UseVisualStyleBackColor = true;
+            this.btnCorrer.Click += new System.EventHandler(this.btnCorrer_Click);
             // 
             // lblNomeApostador
             // 
@@ -225,7 +233,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(272, 472);
+            this.label2.Location = new System.Drawing.Point(255, 472);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(130, 16);
             this.label2.TabIndex = 17;
@@ -233,17 +241,44 @@
             // 
             // numericValor
             // 
-            this.numericValor.Location = new System.Drawing.Point(147, 472);
+            this.numericValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericValor.Location = new System.Drawing.Point(198, 472);
+            this.numericValor.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.numericValor.Name = "numericValor";
-            this.numericValor.Size = new System.Drawing.Size(119, 20);
+            this.numericValor.Size = new System.Drawing.Size(51, 22);
             this.numericValor.TabIndex = 18;
+            this.numericValor.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             // 
             // numericCao
             // 
-            this.numericCao.Location = new System.Drawing.Point(409, 472);
+            this.numericCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericCao.Location = new System.Drawing.Point(391, 472);
+            this.numericCao.Maximum = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.numericCao.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericCao.Name = "numericCao";
-            this.numericCao.Size = new System.Drawing.Size(109, 20);
+            this.numericCao.Size = new System.Drawing.Size(51, 22);
             this.numericCao.TabIndex = 19;
+            this.numericCao.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // lblJoao
             // 
@@ -278,12 +313,17 @@
             // lblBalcaoApostas
             // 
             this.lblBalcaoApostas.AutoSize = true;
-            this.lblBalcaoApostas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBalcaoApostas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBalcaoApostas.Location = new System.Drawing.Point(42, 243);
             this.lblBalcaoApostas.Name = "lblBalcaoApostas";
             this.lblBalcaoApostas.Size = new System.Drawing.Size(140, 16);
             this.lblBalcaoApostas.TabIndex = 5;
             this.lblBalcaoApostas.Text = "Balcão de Apostas";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 20;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FormPrincipal
             // 
@@ -318,7 +358,9 @@
             this.MinimizeBox = false;
             this.Name = "FormPrincipal";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Simulação Pista de Corrida";
+            this.Load += new System.EventHandler(this.FormPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxPistaCorrida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCao1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCao2)).EndInit();
@@ -356,6 +398,7 @@
         private System.Windows.Forms.Label lblBeto;
         private System.Windows.Forms.Label lblAlfredo;
         private System.Windows.Forms.Label lblBalcaoApostas;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
